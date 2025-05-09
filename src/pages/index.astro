@@ -20,9 +20,9 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <nav>
         <ul class="nav-menu">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About Us</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
           <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#about">About Us</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#contact" class="cta-button">Contact Us</a></li>
         </ul>
@@ -67,27 +67,44 @@ import Layout from '../layouts/Layout.astro';
       <circle cx="100" cy="100" r="3" fill="#A4C639">
         <animate attributeName="r" values="3;8;3" dur="2s" repeatCount="indefinite"></animate>
         <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"></animate>
+        <animateTransform attributeName="transform"
+                          type="translate"
+                          values="0 0; 0 -10; 0 0"
+                          dur="3s"
+                          repeatCount="indefinite" />
       </circle>
       <circle cx="150" cy="200" r="3" fill="#A4C639">
         <animate attributeName="r" values="3;8;3" dur="2s" repeatCount="indefinite" begin="0.5s"></animate>
         <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite" begin="0.5s"></animate>
+        <animateTransform attributeName="transform"
+                          type="translate"
+                          values="0 0; 0 -10; 0 0"
+                          dur="3s"
+                          begin="0.5s"
+                          repeatCount="indefinite" />
       </circle>
       <circle cx="200" cy="300" r="3" fill="#A4C639">
         <animate attributeName="r" values="3;8;3" dur="2s" repeatCount="indefinite" begin="1s"></animate>
         <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite" begin="1s"></animate>
+        <animateTransform attributeName="transform"
+                          type="translate"
+                          values="0 0; 0 -10; 0 0"
+                          dur="3s"
+                          begin="1s"
+                          repeatCount="indefinite" />
       </circle>
     </svg>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="services">
+  <!-- Core Capabilities Section -->
+  <section id="capabilities" class="services"> {/* Kept class="services" for CSS continuity, changed id */}
     <div class="container">
       <div class="section-title">
-        <h2>Our Services</h2>
+        <h2>Core Capabilities</h2>
         <p>At AsenTech, we provide tailored AI automation solutions to help Ghanaian businesses streamline operations, reduce costs, and accelerate growth.</p>
       </div>
-      <div class="services-grid">
-        <div class="service-card">
+      <div class="services-grid"> {/* Kept class="services-grid" for CSS continuity */}
+        <div class="service-card"> {/* Kept class="service-card" for CSS continuity */}
           <div class="service-icon">
             <i class="fas fa-robot"></i>
           </div>
@@ -128,60 +145,6 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3>AI Training</h3>
           <p>Empower your team with the knowledge and skills needed to effectively utilize AI automation tools.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <div class="about-content">
-        <div class="about-image">
-          <img src="https://via.placeholder.com/600x450" alt="AsenTech Team">
-        </div>
-        <div class="about-text">
-          <h2>About AsenTech</h2>
-          <p>AsenTech is Ghana's premier AI automation agency, dedicated to empowering local businesses with cutting-edge technology solutions. We believe that artificial intelligence should be accessible to businesses of all sizes, helping them compete in an increasingly digital marketplace.</p>
-          <p>Our mission is to drive sustainable growth through intelligent automation, enabling Ghanaian enterprises to optimize operations, enhance customer experiences, and achieve measurable ROI.</p>
-          <div class="values-grid">
-            <div class="value-item">
-              <div class="value-icon">
-                <i class="fas fa-lightbulb"></i>
-              </div>
-              <div class="value-text">
-                <h4>Innovation</h4>
-                <p>We lead with curiosity and creativity, constantly exploring emerging AI technologies.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-icon">
-                <i class="fas fa-shield-alt"></i>
-              </div>
-              <div class="value-text">
-                <h4>Trust</h4>
-                <p>Our solutions are secure, transparent, and backed by local expertise.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-icon">
-                <i class="fas fa-chart-bar"></i>
-              </div>
-              <div class="value-text">
-                <h4>Impact</h4>
-                <p>We focus on measurable outcomes that drive real business growth.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-icon">
-                <i class="fas fa-puzzle-piece"></i>
-              </div>
-              <div class="value-text">
-                <h4>Simplicity</h4>
-                <p>Complex AI, made simple—intuitive interfaces with hands-on support.</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -373,6 +336,60 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="https://via.placeholder.com/600x450" alt="AsenTech Team">
+        </div>
+        <div class="about-text">
+          <h2>About AsenTech</h2>
+          <p>AsenTech is Ghana's premier AI automation agency, dedicated to empowering local businesses with cutting-edge technology solutions. We believe that artificial intelligence should be accessible to businesses of all sizes, helping them compete in an increasingly digital marketplace.</p>
+          <p>Our mission is to drive sustainable growth through intelligent automation, enabling Ghanaian enterprises to optimize operations, enhance customer experiences, and achieve measurable ROI.</p>
+          <div class="values-grid">
+            <div class="value-item">
+              <div class="value-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <div class="value-text">
+                <h4>Innovation</h4>
+                <p>We lead with curiosity and creativity, constantly exploring emerging AI technologies.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="value-text">
+                <h4>Trust</h4>
+                <p>Our solutions are secure, transparent, and backed by local expertise.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <div class="value-text">
+                <h4>Impact</h4>
+                <p>We focus on measurable outcomes that drive real business growth.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">
+                <i class="fas fa-puzzle-piece"></i>
+              </div>
+              <div class="value-text">
+                <h4>Simplicity</h4>
+                <p>Complex AI, made simple—intuitive interfaces with hands-on support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonials Section -->
   <section id="testimonials" class="testimonials">
     <div class="container testimonials-content">
@@ -467,14 +484,14 @@ import Layout from '../layouts/Layout.astro';
         <div class="footer-column">
           <h3>Quick Links</h3>
           <ul class="footer-links">
-            <li><a href="#about">About Us</a></li>
             <li><a href="#solutions">Solutions</a></li>
+            <li><a href="#about">About Us</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact Us</a></li>
           </ul>
         </div>
         <div class="footer-column">
-          <h3>Our Services</h3>
+          <h3>Core Capabilities</h3>
           <ul class="footer-links">
             <li><a href="#">Process Automation</a></li>
             <li><a href="#">AI Consulting</a></li>
@@ -795,7 +812,7 @@ import Layout from '../layouts/Layout.astro';
         opacity: 0.9;
     }
     
-    /* Services Section */
+    /* Services Section (CSS class name kept for continuity) */
     .services {
         padding: 100px 0;
         background-color: var(--cool-gray);
@@ -818,13 +835,13 @@ import Layout from '../layouts/Layout.astro';
         color: var(--charcoal);
     }
     
-    .services-grid {
+    .services-grid { /* CSS class name kept for continuity */
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
     }
     
-    .service-card {
+    .service-card { /* CSS class name kept for continuity */
         background-color: white;
         border-radius: 10px;
         padding: 30px;

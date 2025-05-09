@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const WHATSAPP_NUMBER = "233247685257"; // Replace with your WhatsApp number (include country code, no + or spaces)
+const WHATSAPP_MESSAGE = "Hello AsenTech, I'm interested in your services."; // Optional pre-filled message
 ---
 
 <!doctype html>
@@ -20,6 +22,17 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<slot />
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
+      class="whatsapp-fab"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with us on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
 	</body>
 </html>
 <style is:global>
@@ -27,4 +40,32 @@ const { title } = Astro.props;
 	body {
 		margin: 0; /* Basic reset */
 	}
+
+  /* WhatsApp Floating Action Button */
+  .whatsapp-fab {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .whatsapp-fab:hover {
+    transform: scale(1.1);
+    background-color: #1DAE54; /* Darker shade on hover */
+  }
+
+  .whatsapp-fab i {
+    line-height: 1; /* Helps center the icon if it's slightly off */
+  }
 </style>
